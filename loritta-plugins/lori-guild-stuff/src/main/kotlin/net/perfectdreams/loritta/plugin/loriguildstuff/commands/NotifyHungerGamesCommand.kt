@@ -14,18 +14,18 @@ object NotifyHungerGamesCommand {
 		}
 
 		executesDiscord {
-      val member = this.member!!
-     
-      val levelRole = guild.getRoleById(655132411566358548L)!!      
-      if (!member.roles.contains(levelRole)) {
-        reply(
-          LorittaReply(
-            "Você não pode usar este comando, você precisa ter ao menos nível 10! Qual ir se enturmar com outros membros ein? ;w;",
-            "<:lori_reading:853052040430878750>"
-          )
-        )
-        return
-      }
+			val member = this.member!!
+			
+			val levelRole = guild.getRoleById(655132411566358548L)!!      
+			if (!member.roles.contains(levelRole)) {
+				reply(
+					LorittaReply(
+						"Você não pode usar este comando, você precisa ter ao menos nível 10! Qual ir se enturmar com outros membros ein? ;w;",
+						"<:lori_reading:853052040430878750>"
+					)
+				)
+				return@executesDiscord
+			}
       
 			val roleId = 866871498547527720L
 			val role = guild.getRoleById(roleId)!!
